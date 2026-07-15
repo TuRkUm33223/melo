@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Jumpscare</title>
+
+<style>
+html,body{
+margin:0;
+height:100%;
+background:black;
+overflow:hidden;
+}
+
+#foto{
+display:none;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+button{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:30px;
+padding:20px 40px;
+cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<button onclick="baslat()">Videoyu Başlat</button>
+
+<img id="foto" src="jumpscare.png">
+
+<audio id="ses" src="scream.mp3"></audio>
+
+<script>
+function baslat(){
+    document.querySelector("button").style.display="none";
+    document.getElementById("foto").style.display="block";
+    document.getElementById("ses").play();
+}
+</script>
+
+</body>
+</html>
